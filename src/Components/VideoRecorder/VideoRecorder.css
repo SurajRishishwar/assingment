@@ -1,0 +1,30 @@
+.videoRecorder > video {
+  aspect-ratio: 16/9;
+  width: 100%;
+  background-color: black;
+}
+.videoRecorder {
+  position: relative;
+  background-color: var(--accent-color);
+  border-radius: 0 0 4px 4px;
+  margin-block: 20px;
+}
+.controls {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: all 1000ms ease-in;
+}
+
+.controls > button {
+  background-color: transparent;
+  border: none;
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+.videoRecorder:is(:focus, :hover) > .controls {
+  visibility: visible;
+}
